@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Actions\CreateUserAction;
-use App\Actions\DeleteUserAction;
-use App\Actions\FindUserByIdAction;
-use App\Actions\GetUsersAction;
-use App\Actions\UpdateUserAction;
+use App\Actions\Users\CreateUserAction;
+use App\Actions\Users\DeleteUserAction;
+use App\Actions\Users\FindUserByIdAction;
+use App\Actions\Users\GetUsersAction;
+use App\Actions\Users\UpdateUserAction;
 use App\Http\Controllers\ApiController;
 use App\Http\Requests\V1\CreateUserRequest;
 use App\Http\Requests\V1\UpdateUserRequest;

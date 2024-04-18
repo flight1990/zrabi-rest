@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Users;
 
-use App\Tasks\UpdateUserTask;
+use App\Tasks\Users\UpdateUserTask;
 use Illuminate\Database\Eloquent\Model;
 
 class UpdateUserAction

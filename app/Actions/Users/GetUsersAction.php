@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Users;
 
-use App\Tasks\GetUsersTask;
+use App\Tasks\Users\GetUsersTask;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class GetUsersAction

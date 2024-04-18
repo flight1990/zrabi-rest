@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Users;
 
-use App\Tasks\CreateUserTask;
+use App\Tasks\Users\CreateUserTask;
 use Illuminate\Database\Eloquent\Model;
 
 class CreateUserAction

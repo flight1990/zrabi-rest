@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Users;
 
-use App\Tasks\DeleteUserTask;
+use App\Tasks\Users\DeleteUserTask;
 
 class DeleteUserAction
 {

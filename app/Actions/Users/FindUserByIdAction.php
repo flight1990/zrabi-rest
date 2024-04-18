@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Users;
 
-use App\Tasks\FindUserByIdTask;
+use App\Tasks\Users\FindUserByIdTask;
 use Illuminate\Database\Eloquent\Model;
 
 class FindUserByIdAction

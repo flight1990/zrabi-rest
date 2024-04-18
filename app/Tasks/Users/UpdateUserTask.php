@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks;
+namespace App\Tasks\Users;
 
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
