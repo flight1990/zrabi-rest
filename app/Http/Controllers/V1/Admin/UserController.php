@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\V1;
+namespace App\Http\Controllers\V1\Admin;
 
 use App\Actions\Users\CreateUserAction;
 use App\Actions\Users\DeleteUserAction;
