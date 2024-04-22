@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\V1;
+namespace App\Http\Requests\V1\Pages;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdatePageRequest extends FormRequest
+class CreatePageRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -14,8 +14,8 @@ class UpdatePageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['sometimes', 'string', 'max:190'],
-            'content' => ['sometimes', 'string'],
+            'title' => ['required', 'string', 'max:190'],
+            'content' => ['required', 'string'],
             'is_active' => ['sometimes', 'boolean']
         ];
     }

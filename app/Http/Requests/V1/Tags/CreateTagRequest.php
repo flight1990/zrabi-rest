@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\V1;
+namespace App\Http\Requests\V1\Tags;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreatePageRequest extends FormRequest
+class CreateTagRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -15,8 +15,7 @@ class CreatePageRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:190'],
-            'content' => ['required', 'string'],
-            'is_active' => ['sometimes', 'boolean']
+            'type' => ['required', 'in:category,service'],
         ];
     }
 }

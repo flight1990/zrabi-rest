@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\V1\PageController;
+use App\Http\Controllers\V1\Admin\TagController as AdminTagController;
 use App\Http\Controllers\V1\Admin\PageController as AdminPageController;
 use App\Http\Controllers\V1\Admin\UserController as AdminUserController;
 use Illuminate\Http\Request;
@@ -11,14 +12,13 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::prefix('v1')->group(function () {
-
     Route::controller(PageController::class)->prefix('pages')->group(function () {
         Route::get('/{slug}', 'show');
     });
 
     Route::prefix('admin')->group(function () {
+        Route::apiResource('tags', AdminTagController::class);
         Route::apiResource('users', AdminUserController::class);
         Route::apiResource('pages', AdminPageController::class);
     });
-
 });
