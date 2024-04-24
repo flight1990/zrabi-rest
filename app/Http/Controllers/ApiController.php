@@ -23,7 +23,7 @@ abstract class ApiController extends Controller
 
     public function respondWithSuccess(ResourceCollection|JsonResource $resource, string $message = 'success'): ResourceCollection|JsonResource
     {
-        return $resource->additional(['message' => $message]);
+        return $resource;
     }
 
     public function respondWithSuccessCreate(JsonResource $resource, string $message = 'success'): JsonResponse
@@ -41,7 +41,11 @@ abstract class ApiController extends Controller
 
     public function respondWithArray(array $array, array $headers = [], string $message = 'success'): JsonResponse
     {
-        $array = array_merge(['message' => $message], $array);
+        $array = [
+            'data' => $array,
+            'message' => $message,
+        ];
+
         return response()->json($array, $this->statusCode, $headers);
     }
 }

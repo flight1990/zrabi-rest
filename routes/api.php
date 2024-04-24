@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\V1\PageController;
+use App\Http\Controllers\V1\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\V1\Admin\TagController as AdminTagController;
 use App\Http\Controllers\V1\Admin\PageController as AdminPageController;
 use App\Http\Controllers\V1\Admin\UserController as AdminUserController;
@@ -17,6 +18,8 @@ Route::prefix('v1')->group(function () {
     });
 
     Route::prefix('admin')->group(function () {
+        Route::apiResource('categories', AdminCategoryController::class);
+        Route::post('categories/rebuild', [AdminCategoryController::class, 'rebuild']);
         Route::apiResource('tags', AdminTagController::class);
         Route::apiResource('users', AdminUserController::class);
         Route::apiResource('pages', AdminPageController::class);
