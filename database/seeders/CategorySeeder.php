@@ -13,19 +13,6 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::factory(2)
-            ->create();
-//            ->each(function ($category) {
-//                Category::factory(2)
-//                    ->create([
-//                        'parent_id' => $category->id
-//                    ])
-//                    ->each(function ($category) {
-//                        Category::factory(2)
-//                            ->create([
-//                                'parent_id' => $category->id
-//                            ]);
-//                    });
-//            });
+        Category::factory(10)->create();
     }
 }
