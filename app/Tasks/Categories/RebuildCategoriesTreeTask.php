@@ -6,7 +6,7 @@ use App\Models\Category;
 
 class RebuildCategoriesTreeTask
 {
-    public function run(array $payload)
+    public function run(array $payload): int
     {
         return Category::rebuildTree($payload, false);
     }
